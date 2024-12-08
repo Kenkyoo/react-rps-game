@@ -22,10 +22,10 @@ function App() {
       (userChoice === "paper" && computerChoice === "rock") ||
       (userChoice === "scissors" && computerChoice === "paper")
     ) {
-      setResult("You win!");
+      setResult("Computer win!");
       setUserScore(userScore + 1)
     } else {
-      setResult("Computer wins!");
+      setResult("You win!");
       setComputerScore(computerScore + 1)
     }
   }
