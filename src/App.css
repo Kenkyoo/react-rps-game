@@ -1,0 +1,147 @@
+@keyframes icon-animation {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.4);
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    transform: scale(0.5);
+  }
+  90% {
+    opacity: 0;
+  }
+}
+body {
+  background-color: #151e28;
+  color: #edf0f9;
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+}
+
+#root {
+  margin: auto;
+  max-width: 1000px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.result {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 2rem;
+}
+
+#moves {
+  list-style: none;
+  width: 100%;
+  padding: 0;
+  display: flex;
+}
+#moves li {
+  background: #35b197;
+  width: 33.33%;
+  margin: 1em;
+  cursor: pointer;
+}
+#moves li:hover {
+  background: rgb(78.7695652174, 202.2304347826, 176.3434782609);
+}
+#moves li:active {
+  background: #f66e3a;
+}
+#moves li .fa {
+  display: block;
+  font-size: 48px;
+  text-align: center;
+  width: 100%;
+  padding: 1em;
+  box-sizing: border-box;
+}
+#moves li .fa.animating {
+  animation: icon-animation 2s 1;
+}
+#moves li .text {
+  text-align: center;
+  width: 100%;
+  display: block;
+  padding-bottom: 2em;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.scoreboard {
+  width: 100%;
+}
+.scoreboard table {
+  width: 100%;
+  background: rgb(26.2672131148, 37.5245901639, 50.0327868852);
+}
+.scoreboard table td {
+  padding: 0.5em;
+  box-sizing: border-box;
+  text-align: center;
+  text-transform: uppercase;
+}
+.scoreboard table thead {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+}
+.scoreboard table thead td {
+  padding-top: 2em;
+}
+.scoreboard table tbody td {
+  font-size: 96px;
+  font-weight: 900;
+  line-height: 1em;
+}
+
+button {
+  background: #e94d5a;
+  border: none;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 5px;
+}
+button:hover {
+  background: rgb(238.61, 122.39, 132.075);
+}
+button:active {
+  background: rgb(227.39, 31.61, 47.925);
+}
+
+.result h2 {
+  animation: fade-in 0.5s ease-in-out;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*# sourceMappingURL=App.css.map */
